@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<!--<script src="C:\Users\USER\Desktop\IWP\Personal Website\jquery-3.2.1.js"></script>
+<script src="C:\Users\USER\Desktop\IWP\Personal Website\typed.js"></script>-->
+<script src="G:\Personal Website\jquery-3.2.1.js"></script>
+<script src="G:\Personal Website\typed.js"></script>
+</head>
+<body>
+<div class="first">
+<h1 class="heading1">I<mark class="red">'</mark>m Shreya <mark class="red">Gupta</mark></h1>
+<p class="typing"></p>
+</div>
+<div class="second">
+<h1>ABOUT ME</h1>
+	
+	<p>I am a third year student currently pursuing B.Tech degree in Computer Science and<br> Engineering.I happen to be a huge fan of Asian dramas and tend
+to watch them in my free <br>time.Apart from that I'm an enthusiast in graphic designing and I work on several platforms<br> like Adobe Photoshop, Illustrator and Indesign. 
+And like all other normal<br> people,I love listening to music, watch movies and hang out with friends.</p>
+</div>
+<div class="skills">
+<h1>SKILLS</h1>
+
+<div class="fourcircles">
+<div class="container">
+    <div id="activeBorder1" class="active-border">
+        <div id="circle1" class="circle">
+            <span class="prec 270" id="prec" style="color:#fff">60%</span>
+			<p><b>C++,C</b><p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="activeBorder2" class="active-border">
+        <div id="circle2" class="circle">
+            <span class="prec 270" id="prec" style="color:#fff">65%</span>
+			<p><b>HTML and CSS</b></p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="activeBorder3" class="active-border">
+        <div id="circle3" class="circle">
+            <span class="prec 270" id="prec" style="color:#fff">75%</span>
+			<p><b>Photoshop</b></p>
+        </div>
+    </div>
+</div>
+</div> <!--closing of fourcircles-->
+</div> <!--closing of skills-->
+
+
+<div class="education">
+<h1>EDUCATION</h1>
+	<section class="ed-timeline">
+		<ul>
+			<li class="in-view">
+				<div>
+				<time>2018</time>
+				Graduation
+				</div>
+			</li>
+			<li class="in-view">
+				<div>
+				<time>2017</time>
+				3rd year Btech<br>cgpa-9.23
+				</div>
+			</li>
+			<li class="in-view">
+				<div>
+				<time>2014</time>
+				12th Standard<br>95%, CBSE
+				</div>
+			</li>
+			<li class="in-view">
+				<div>
+				<time>2012</time>
+				10th Standard<br>96%, ICSE
+				</div>
+			</li>
+		</ul>
+	</section>
+</div>
+<div class="resume">
+	<h1>Resume</h1>
+	<a href="C:\Users\ADITI BHANDARI\Downloads\vit\IWP\WINSEM2016-17_CSE326_ETH_1737_02-MAR-2017_RM001_PHP_Intro.pdf" download><input type="button" value="Download" id="download"></a>
+</div><!--closing of  resume-->
+<div class="contact">
+	<h1>Contact Me</h1>
+	<a style="padding:20px" href="https://www.facebook.com/profile.php?id=100005620278379" target="_blank"><!--enter facebook-->
+	<img class="button" src="facebook1.png" width="40" height="40" alt="Share on Facebook" title="Share on Facebook" />
+	</a>
+	<a style="padding:20px" href="" target="_blank"><!--enter linkedin link-->
+	<img class="button" src="linkedin1.png" width="40" height="40" alt="Share on Facebook" title="Share on Facebook" />
+	</a><br><br><br>
+	<p style="color:white"><strong>shreyag010196@gmail.com</strong></p><br><br>
+</div>
+</body>
+
+
+<script>
+//Change the typed of home page
+$(function () {
+
+            $(".typing").typed({
+                strings: ["Student", "Designer","K-drama fan"],
+                typeSpeed: 30, // typing speed
+                backDelay: 500, // pause before backspacing
+                callback: function () { $(this) }
+            });
+});
+
+
+(function() {
+
+  'use strict';
+
+  // define variables
+  var items = document.querySelectorAll(".ed-timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+  
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+})();
+
+</script>
+
+</html>
